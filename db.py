@@ -18,6 +18,8 @@ age1 = Label(app,bg='white',text ='age',fg = 'blue').grid(row=3,column=0)
 city1 = Label(app,bg='white',text ='city',fg = 'blue').grid(row=4,column=0)
 pincode1 = Label(app,bg='white',text ='pincode',fg = 'blue').grid(row=5,column=0)
 
+but1=Button(app,text='add entry to database').grid(row=6,column=1)
+but2=Button(app,text='list the entry').grid(row=7,column=1)
 
 
 app.mainloop()
