@@ -1,4 +1,26 @@
 from tkinter import *
+import sqlite3
+
+# conn=sqlite3.connect("python.db")
+# cur=conn.cursor()
+# cur.execute("CREATE TABLE  database (firstname TEXT,lastname TEXT,address TEXT,coty TEXT,state TEXT,pincode NUMBER) ")
+# conn.commit()
+# conn.close()
+
+def submit():
+    conn=sqlite3.connect("python.db")
+    cur=conn.cursor()
+    cur.execute("INSERT INTO database VALUES(:f_name, :l_name, :address, :city, :state, :pincode)")
+    {
+      'f_name':f_name.get(),
+      'l_name':l_name.get(),
+      'address':address.get(),
+      'city':city.get(),
+      'pincode':pincode.get()
+     }
+    conn.commit()
+    conn.close()
+
 
 app = Tk()
 app.title('databse entry')
